@@ -124,7 +124,7 @@ body {
 .studio-hero .logo {
   position: absolute;
   left: 40.33vw;
-  top: 4.8vw;
+  top: 3.8vw;
   width: 17vw;
   color: var(--foreground);
   z-index: 10;
@@ -213,7 +213,7 @@ body {
     align-self: flex-start;
     width: 210px;
     max-width: 75%;
-    margin-top: -14px;
+    margin-top: -22px;
     margin-bottom: 0px;
   }
 

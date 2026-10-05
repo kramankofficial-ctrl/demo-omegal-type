@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import mascotImg from '../assets/images/mascot_transparent.png';
 
 export const InteractiveTactileMascot: React.FC = () => {
   const leftEyeRef = useRef<HTMLDivElement>(null);
@@ -178,7 +179,7 @@ export const InteractiveTactileMascot: React.FC = () => {
       
       {/* The Tactile Fuzzy Knitted Mascot on Transparent PNG */}
       <img
-        src="/src/assets/images/mascot_transparent.png"
+        src={mascotImg || "/images/mascot_transparent.png"}
         alt="Datevra tactile fuzzy character"
         className="w-full h-full object-contain object-bottom pointer-events-none select-none max-h-full"
       />

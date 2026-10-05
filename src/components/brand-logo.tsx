@@ -11,7 +11,7 @@ export default function BrandLogo() {
     >
       <text
         x="50%"
-        y="11"
+        y="3"
         textAnchor="middle"
         dominantBaseline="middle"
         fill="currentColor"

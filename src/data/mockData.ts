@@ -1,7 +1,13 @@
 import { DateExperience, CityOption, TestimonialItem, QuizQuestion, QuizResult } from '../types';
 
-export const HERO_IMAGE = '/src/assets/images/hero_couple_date_bistro_1791206720158.jpg';
-export const TACTILE_MASCOT_IMAGE = '/src/assets/images/datevra_tactile_character_1791207015678.jpg';
+import heroCoupleImg from '../assets/images/hero_couple_date_bistro_1791206720158.jpg';
+import tactileCharacterImg from '../assets/images/datevra_tactile_character_1791207015678.jpg';
+import vinylLoungeImg from '../assets/images/curated_vinyl_lounge_1791206739969.jpg';
+import artGalleryImg from '../assets/images/curated_art_gallery_1791206755769.jpg';
+import rooftopSunsetImg from '../assets/images/curated_rooftop_sunset_1791206770091.jpg';
+
+export const HERO_IMAGE = heroCoupleImg || '/images/hero_couple_date_bistro_1791206720158.jpg';
+export const TACTILE_MASCOT_IMAGE = tactileCharacterImg || '/images/datevra_tactile_character_1791207015678.jpg';
 
 export const CURATED_EXPERIENCES: DateExperience[] = [
   {
@@ -12,7 +18,7 @@ export const CURATED_EXPERIENCES: DateExperience[] = [
     neighborhood: 'West Village',
     city: 'New York',
     duration: '2.5 — 3 hours',
-    image: '/src/assets/images/curated_vinyl_lounge_1791206739969.jpg',
+    image: vinylLoungeImg || '/images/curated_vinyl_lounge_1791206739969.jpg',
     venueName: 'Kissa Reverie',
     venueType: 'Japanese Listening Bar & Wine Salon',
     perkDescription: 'Guaranteed corner booth reservation + sommelier cellar preview pour',
@@ -37,7 +43,7 @@ export const CURATED_EXPERIENCES: DateExperience[] = [
     neighborhood: 'Le Marais',
     city: 'Paris',
     duration: '3 hours',
-    image: '/src/assets/images/curated_art_gallery_1791206755769.jpg',
+    image: artGalleryImg || '/images/curated_art_gallery_1791206755769.jpg',
     venueName: 'Atelier Saint-Germain',
     venueType: 'Private Sculpture Pavilion & Bistro',
     perkDescription: 'After-hours exhibition access pass + complimentary seasonal amuse-bouche',
@@ -62,7 +68,7 @@ export const CURATED_EXPERIENCES: DateExperience[] = [
     neighborhood: 'Mayfair',
     city: 'London',
     duration: '2.5 hours',
-    image: '/src/assets/images/curated_rooftop_sunset_1791206770091.jpg',
+    image: rooftopSunsetImg || '/images/curated_rooftop_sunset_1791206770091.jpg',
     venueName: 'The Conservatory Room',
     venueType: 'Rooftop Glasshouse & Botanical Bar',
     perkDescription: 'High-terrace skyline seating + bespoke bespoke herbal infusions crafted to order',
@@ -87,7 +93,7 @@ export const CURATED_EXPERIENCES: DateExperience[] = [
     neighborhood: 'SoHo',
     city: 'New York',
     duration: '3.5 hours',
-    image: '/src/assets/images/hero_couple_date_bistro_1791206720158.jpg',
+    image: heroCoupleImg || '/images/hero_couple_date_bistro_1791206720158.jpg',
     venueName: 'Maison Miro',
     venueType: 'Intimate 14-Seat Chef Counter',
     perkDescription: 'Side-by-side reserved marble counter seats + welcome glass of vintage Champagne',
