@@ -1,0 +1,7 @@
+{
+  "name": "Datevra",
+  "description": "An intentional dating and curated date experience platform connecting thoughtful people through real-world dates and partner venues.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

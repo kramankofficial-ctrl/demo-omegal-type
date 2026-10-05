@@ -1,0 +1,319 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Epilogue;
+  src: url('/fonts/Epilogue-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #F4F0F8;
+  --background-soft: #F2F1F8;
+  --background-lavender: #F4EFFC;
+  --foreground: #1E1B1D;
+  --foreground-muted: #4A4549;
+  --border: #E5E0E9;
+  --white: #FFFFFF;
+
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* ======================================================= */
+/* EXACT STUDIO HERO SPECIFICATION STYLES                  */
+/* ======================================================= */
+.studio-hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 6.54vw;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.studio-hero .jobs {
+  margin-left: 8.65vw;
+  width: 25vw;
+  position: relative;
+  z-index: 10;
+}
+
+.studio-hero .tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 100px;
+  background: var(--background-soft);
+  border: 1px solid var(--border);
+  padding: .39vw .61vw;
+  font-size: .88vw;
+  line-height: 1.2;
+  height: 1.9vw;
+  white-space: nowrap;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--foreground);
+}
+
+.studio-hero .headline {
+  font-family: Epilogue, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.66vw;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--foreground);
+}
+
+.studio-hero .job-title {
+  display: block;
+  margin-top: 1.45vw;
+}
+
+.studio-hero .footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .93vw;
+  margin-top: 1.3vw;
+  font-size: 1.075vw;
+  line-height: 1.35;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--foreground);
+}
+
+.studio-hero .footer-nav a,
+.studio-hero .footer-nav span {
+  color: var(--foreground);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.studio-hero .footer-nav a:hover,
+.studio-hero .footer-nav span:hover {
+  opacity: 0.65;
+}
+
+.studio-hero .logo {
+  position: absolute;
+  left: 40.33vw;
+  top: 4.8vw;
+  width: 17vw;
+  color: var(--foreground);
+  z-index: 10;
+}
+
+.studio-hero .logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.studio-hero .contact {
+  position: absolute;
+  left: 74.3vw;
+  top: 6.54vw;
+  z-index: 10;
+}
+
+.studio-hero .contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1.45vw;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.studio-hero .contact-links:hover {
+  opacity: 0.8;
+}
+
+.studio-hero .note {
+  margin: 1.05vw 0 0;
+  font-size: .733vw;
+  line-height: 1.4;
+  white-space: nowrap;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--foreground-muted);
+}
+
+.studio-hero .socials {
+  display: flex;
+  align-items: center;
+  gap: 1.43vw;
+  margin-top: 1.61vw;
+}
+
+.studio-hero .socials span,
+.studio-hero .socials img {
+  display: block;
+  width: 1.71vw;
+  height: 1.71vw;
+}
+
+.studio-hero .footer-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.studio-hero .footer-background video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media(max-width: 700px) {
+  .studio-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    min-height: 100svh;
+    padding: 40px 24px 0;
+    background: var(--background);
+  }
+
+  .studio-hero .logo {
+    position: static;
+    order: 0;
+    align-self: flex-start;
+    width: 210px;
+    max-width: 75%;
+    margin-top: -14px;
+    margin-bottom: 0px;
+  }
+
+  .studio-hero .jobs {
+    order: 1;
+    margin: 0;
+    width: 100%;
+  }
+
+  .studio-hero .tag {
+    height: 30px;
+    padding: 6px 11px;
+    font-size: 14px;
+  }
+
+  .studio-hero .headline {
+    font-size: clamp(22px, 6.3vw, 30px);
+    line-height: 1.25;
+  }
+
+  .studio-hero .job-title,
+  .studio-hero .contact-links {
+    margin-top: 19px;
+  }
+
+  .studio-hero .footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .studio-hero .footer-nav span,
+  .studio-hero .footer-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .studio-hero .contact {
+    position: static;
+    order: 2;
+    width: 100%;
+  }
+
+  .studio-hero .contact-links {
+    gap: 4px;
+    white-space: normal;
+  }
+
+  .studio-hero .note {
+    max-width: 34ch;
+    margin: 16px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  .studio-hero .socials {
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .studio-hero .socials span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+
+  .studio-hero .socials img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .studio-hero .socials span:first-child {
+    margin-left: -7px;
+  }
+
+  .studio-hero .footer-background {
+    position: relative;
+    inset: auto;
+    order: 3;
+    z-index: auto;
+    flex: none;
+    align-self: center;
+    width: calc(100% + 48px);
+    aspect-ratio: 4/3;
+    margin-top: -16px;
+  }
+
+  .studio-hero .footer-background video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

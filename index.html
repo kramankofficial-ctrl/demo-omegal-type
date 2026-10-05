@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var _fetch = window.fetch;
+          var descriptor = {
+            get: function() { return _fetch; },
+            set: function(v) { _fetch = v; },
+            configurable: true,
+            enumerable: true
+          };
+          try {
+            Object.defineProperty(window, 'fetch', descriptor);
+          } catch (e) {}
+          try {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              Object.defineProperty(Window.prototype, 'fetch', descriptor);
+            }
+          } catch (e) {}
+        } catch (e) {}
+      })();
+    </script>
+    <title>Datevra — Intentional Dating & Curated Date Experiences</title>
+    <meta name="description" content="Datevra is an intentional dating and curated date experience platform connecting thoughtful people through real-world dates and partner venues." />
+    <meta property="og:title" content="Datevra — Intentional Dating & Curated Date Experiences" />
+    <meta property="og:description" content="Datevra is an intentional dating and curated date experience platform connecting thoughtful people through real-world dates and partner venues." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Pacifico&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#F4F0F8] text-[#1E1B1D] antialiased selection:bg-[#1E1B1D] selection:text-[#FFFFFF]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
